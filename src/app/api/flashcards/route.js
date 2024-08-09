@@ -5,7 +5,7 @@ const POST = async (request) => {
     const body = await request.json();
     const { description } = body;
 
-    const response = await fetch('https://znxnfxki1k.execute-api.us-east-2.amazonaws.com/', {
+    const response = await fetch(process.env.API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
